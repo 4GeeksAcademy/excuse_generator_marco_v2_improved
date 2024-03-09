@@ -6,7 +6,6 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = () => {
-  //write your code here
   document.querySelector("button").addEventListener("click", () => {
     document.querySelector("#excuse").innerHTML = generateExcuse();
   });
