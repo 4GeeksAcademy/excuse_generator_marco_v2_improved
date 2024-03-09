@@ -12,23 +12,23 @@ window.onload = () => {
   });
 };
 
-let generateExcuse = () => {
-  let pronoun = ["My", "Your"];
-  let subject = [
+const generateExcuse = () => {
+  const pronouns = ["My", "Your"];
+  const subjects = [
     "doctor",
     "dealer",
     "assistant",
     "probation officer",
     "soulmate"
   ];
-  let verb = [
-    "vaporised my",
+  const verbs = [
+    "vaporized my",
     "swallowed my",
     "made fun of my",
     "played with my"
   ];
-  let object = ["heart", "innocence", "outfit", "sanity", "memories"];
-  let place = [
+  const objects = ["heart", "innocence", "outfit", "sanity", "memories"];
+  const places = [
     "at the strip club",
     "at KFC",
     "at the Fridays for Future meeting",
@@ -36,7 +36,7 @@ let generateExcuse = () => {
     "at the knitting class"
   ];
 
-  const getRandomIndex = (array) => Math.floor(Math.random() * array.length);
+  const getRandomIndex = array => Math.floor(Math.random() * array.length);
 
   const pronounIndex = getRandomIndex(pronouns);
   const subjectIndex = getRandomIndex(subjects);
@@ -44,15 +44,5 @@ let generateExcuse = () => {
   const objectIndex = getRandomIndex(objects);
   const placeIndex = getRandomIndex(places);
 
-  return (
-    pronoun[pronounIndex] +
-    " " +
-    subject[subjectIndex] +
-    " " +
-    verb[verbIndex] +
-    " " +
-    object[objectIndex] +
-    " " +
-    place[placeIndex]
-  );
+  return `${pronouns[pronounIndex]} ${subjects[subjectIndex]} ${verbs[verbIndex]} ${objects[objectIndex]} ${places[placeIndex]}`;
 };
