@@ -36,11 +36,13 @@ let generateExcuse = () => {
     "at the knitting class"
   ];
 
-  let pronounIndex = Math.floor(Math.random() * pronoun.length);
-  let subjectIndex = Math.floor(Math.random() * subject.length);
-  let verbIndex = Math.floor(Math.random() * verb.length);
-  let objectIndex = Math.floor(Math.random() * object.length);
-  let placeIndex = Math.floor(Math.random() * place.length);
+  const getRandomIndex = (array) => Math.floor(Math.random() * array.length);
+
+  const pronounIndex = getRandomIndex(pronouns);
+  const subjectIndex = getRandomIndex(subjects);
+  const verbIndex = getRandomIndex(verbs);
+  const objectIndex = getRandomIndex(objects);
+  const placeIndex = getRandomIndex(places);
 
   return (
     pronoun[pronounIndex] +
